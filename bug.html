@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to access an element using getElementsByTagName
+    var divElements = document.getElementsByTagName('div');
+    divElements.innerHTML = '<b>Modified text</b>'; // Error: innerHTML is not a property of a NodeList
+  </script>
+</body>
+</html>
